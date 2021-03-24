@@ -83,16 +83,13 @@ int main() {
 
     //7th task
     auto quant4 = std::count_if(v.begin(), v.end(), [](auto x){return x>4;});
-    //check 7
-    {
-        std::cout << "7.  Nums > 4 in vec:  " << quant4 << std::endl;
-    }
+    std::cout << "7.  Nums > 4 in vec:  " << quant4 << std::endl;
 
     //8th task
     auto summ = std::accumulate(v.begin(), v.end(), 0);
+    std::cout << "8.  Summ of vec el-s: " << summ << " (using algorithm)" << std::endl;
     //check 8
     {
-        std::cout << "8.  Summ of vec el-s: " << summ << " (using algorithm)" << std::endl;
         int summ1 = 0;
         for (auto i : v) {
             summ1 += i;
@@ -102,9 +99,9 @@ int main() {
 
     //9th task
     auto pi = std::accumulate(d.begin(), d.end(), 1ull, [](auto x, auto y){return x*y;});
+    std::cout << "9.  Prod of deq el-s: " << pi << " (using algorithm)" << std::endl;
     //check 9
     {
-        std::cout << "9.  Prod of deq el-s: " << pi << " (using algorithm)" << std::endl;
         unsigned long long pi1 = 1;
         for (auto i : d) {
             pi1 *= i;
